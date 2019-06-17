@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER HyperApp <hyperappcloud@gmail.com>
 
-ARG SS_VER=3.2.3
+ARG SS_VER=3.2.5
 ARG SS_OBFS_VER=0.0.5
 
 RUN set -ex && \
@@ -53,9 +53,9 @@ RUN set -ex && \
 
 
 ENV SERVER_ADDR 0.0.0.0
-ENV SERVER_PORT 8388
+ENV SERVER_PORT 8838
 ENV PASSWORD=
-ENV METHOD chacha20
+ENV METHOD xchacha20-ietf-poly1305
 ENV TIMEOUT 300
 ENV DNS_ADDR 8.8.8.8
 ENV DNS_ADDR_2 8.8.4.4
